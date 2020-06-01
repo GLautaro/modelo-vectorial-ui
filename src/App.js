@@ -1,13 +1,11 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-import SearchPage from './Pages/SearchPage';
-
+import SearchPage from "./Pages/SearchPage";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  return (
-    <SearchPage/>
-  );
+  return <SearchPage />;
 }
 
 export default App;

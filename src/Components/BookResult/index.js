@@ -1,24 +1,28 @@
-import React from 'react';
-import { Card, Grid, Typography, Button } from '@material-ui/core';
+import React from "react";
+import { Card, Row, Col, Button } from "react-bootstrap";
 
-import style from './style';
+import style from "./style";
 
 const BookResult = ({ nombre, peso, ruta }) => {
-    const classes = style();
-    return(
-        <Card className={classes.cardContainer}>
-            <Grid container>
-                <Grid item>
-                    
-                </Grid>
-                <Grid item className={classes.titlesContainer}>
-                    <Typography>{nombre}</Typography>
-                    <Typography>{peso}</Typography>
-                    <a href={ruta}>Ver más</a>
-                </Grid>
-            </Grid>
-        </Card>
-    );
-}
+  return (
+    <Card className="my-2">
+      <Row container>
+        <Col>
+          <Card>
+            <Card.Body>
+              <Card.Title>
+                <a href={ruta}>
+                  <h3>{nombre}</h3>
+                </a>
+              </Card.Title>
+              <h4>{peso}</h4>
+              <a href={ruta}>Ver más</a>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Card>
+  );
+};
 
 export default BookResult;
