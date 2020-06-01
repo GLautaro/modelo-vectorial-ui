@@ -29,6 +29,11 @@ export default () => {
   };
 
   const handleSearchTextClick = (event) => {
+    if(searchText == null || searchText == '' || quantityDocs == '' || quantityDocs == null){
+      alert('Debe escribir el termino de busqueda y la cantidad de documentos para continuar');
+      return;
+    }
+
     fetch(
       `http://localhost:8080/ModeloVectorial/api/buscador?q=${searchText}&r=${quantityDocs}`
     )
@@ -45,7 +50,7 @@ export default () => {
       <Jumbotron fluid>
         <Container>
           <Row container>
-            <Col>
+            <Col className="mb-3">
               <h1>DLC - Motor de busqueda de archivos</h1>
             </Col>
           </Row>
