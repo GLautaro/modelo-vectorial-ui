@@ -14,7 +14,7 @@ const BookResult = ({ nombre, peso, ruta }) => {
                 <Grid item className={classes.titlesContainer}>
                     <Typography>{nombre}</Typography>
                     <Typography>{peso}</Typography>
-                    <Button color="primary" variant="contained" href={ruta}>Ver más</Button>
+                    <a href={ruta}>Ver más</a>
                 </Grid>
             </Grid>
         </Card>

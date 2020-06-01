@@ -8,18 +8,20 @@ const centeredStyleObj = {
 
 export default makeStyles({
     container: {
-        height: '100vh',
         flexDirection: 'column',
-        backgroundColor: '#FCFCFC',
+        backgroundColor: '#fff666',
         ...centeredStyleObj
     },
     cardContainer: {
         flexDirection: 'column',
-        width: 400,
-        height: 200,
+        width: 800,
+        height: 100,
         padding: '2rem',
         backgroundColor: '#ECF7F9',
         ...centeredStyleObj
+    },
+    textContainer: {
+        marginLeft: '.5rem'
     },
     title: {
         fontSize: '1.5rem'
